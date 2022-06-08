@@ -4,7 +4,7 @@ import fetchGraphQL from "../src/fetchGraphQL";
 const {useState, useEffect} = React;
 
 function HomePage() {
-    const [response, setResponse] = useState(null);
+    const [response, setResponse] = useState("nothing yet");
 
     useEffect(() => {
         fetchGraphQL(`query { hello }`, []).then(response => {
@@ -14,7 +14,7 @@ function HomePage() {
         });
     });
 
-    return <div>Server returned ${response}</div>;
+    return <div>Server returned "{response}"</div>;
 }
 
 export default HomePage;
