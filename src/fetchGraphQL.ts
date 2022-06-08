@@ -1,7 +1,7 @@
 // your-app-name/src/fetchGraphQL.ts
 async function fetchGraphQL(text, variables) {
     // Fetch data from local backend
-    const response = await fetchWithTimeout('https://localhost:8080', {
+    const response = await fetchWithTimeout('http://localhost:8080', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
